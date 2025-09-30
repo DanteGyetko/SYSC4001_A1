@@ -7,6 +7,8 @@
 
 #include<interrupts.hpp>
 
+#define CONTEXT_SAVE_TIME 10
+
 int main(int argc, char** argv) {
 
     //vectors is a C++ std::vector of strings that contain the address of the ISR
@@ -19,6 +21,7 @@ int main(int argc, char** argv) {
     std::string execution;  //!< string to accumulate the execution output
 
     /******************ADD YOUR VARIABLES HERE*************************/
+    int current_time = 0;
 
 
 
@@ -29,7 +32,26 @@ int main(int argc, char** argv) {
         auto [activity, duration_intr] = parse_trace(trace);
 
         /******************ADD YOUR SIMULATION CODE HERE*************************/
+        if (activity == "CPU"){
+            execution += std::to_string(current_time) + ", " + std::to_string(duration_intr) + ", " + "CPU burst\n";
+            current_time += duration_intr;
+        }
+        else if (activity == "END_IO"){
 
+        }
+        else { //syscall
+            std::pair<std::string, int> boilerplate;
+            boilerplate = intr_boilerplate(current_time, duration_intr, CONTEXT_SAVE_TIME, vectors);
+            execution += boilerplate.first;
+            current_time = boilerplate.second;
+
+            //device
+            execution += std::to_string(current_time) + ", " + std::to_string(delays[duration_intr - 1]) + ", call device driver " + std::to_string(duration_intr) + "\n";
+            current_time += delays[duration_intr - 1];
+
+            execution += std::to_string(current_time) + ", 1, IRET\n";
+            current_time++;
+        }
 
 
         /************************************************************************/
