@@ -5,6 +5,8 @@
  *
  */
 
+// Added this comment to check git functionality, will be reomved before submission
+
 #include<interrupts.hpp>
 
 #define CONTEXT_SAVE_TIME 10
@@ -33,7 +35,7 @@ int main(int argc, char** argv) {
 
         /******************ADD YOUR SIMULATION CODE HERE*************************/
         if (activity == "CPU"){
-            execution += std::to_string(current_time) + ", " + std::to_string(duration_intr) + ", " + "CPU burst\n";
+            execution += std::to_string(current_time) + ", " + std::to_str(duration_intr) + ", " + "CPU burst\n";
             current_time += duration_intr;
         }
         else if (activity == "END_IO"){
