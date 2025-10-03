@@ -1,7 +1,0 @@
-0, 50, CPU burst
-50, 1, switch to kernel mode
-51, 10, context saved
-61, 1, find vector 7 in memory position 0x000E
-62, 1, load address 0X00BD into the PC
-63, 265, device driver 7
-328, 20, CPU burst

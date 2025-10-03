@@ -7,9 +7,10 @@
 
 // Added this comment to check git functionality, will be reomved before submission
 
-#include<interrupts.hpp>
+#include "interrupts.hpp"
 
 #define CONTEXT_SAVE_TIME 10
+#define ISR_ACTIVITY_TIME 40
 
 int main(int argc, char** argv) {
 
@@ -24,7 +25,7 @@ int main(int argc, char** argv) {
 
     /******************ADD YOUR VARIABLES HERE*************************/
     int current_time = 0;
-
+    std::pair<std::string, int> boilerplate;
 
 
     /******************************************************************/
@@ -35,24 +36,55 @@ int main(int argc, char** argv) {
 
         /******************ADD YOUR SIMULATION CODE HERE*************************/
         if (activity == "CPU"){
-            execution += std::to_string(current_time) + ", " + std::to_str(duration_intr) + ", " + "CPU burst\n";
+            execution += std::to_string(current_time) + ", " + std::to_string(duration_intr) + ", " + "CPU burst\n";
             current_time += duration_intr;
         }
         else if (activity == "END_IO"){
+            execution += std::to_string(current_time) + ", 1, Check if the interrupt is maskable\n";
+            current_time++;
+            
+            execution += std::to_string(current_time) + ", 1, Check the priority of the interrupt\n";
+            current_time++;
 
-        }
-        else { //syscall
-            std::pair<std::string, int> boilerplate;
             boilerplate = intr_boilerplate(current_time, duration_intr, CONTEXT_SAVE_TIME, vectors);
             execution += boilerplate.first;
             current_time = boilerplate.second;
 
-            //device
-            execution += std::to_string(current_time) + ", " + std::to_string(delays[duration_intr - 1]) + ", call device driver " + std::to_string(duration_intr) + "\n";
-            current_time += delays[duration_intr - 1];
+            execution += std::to_string(current_time) + ", " + std::to_string(ISR_ACTIVITY_TIME) + ", END_IO\n";
+            current_time += ISR_ACTIVITY_TIME;
+
+            execution += std::to_string(current_time) + ", " + std::to_string(delays[duration_intr - 1] - ISR_ACTIVITY_TIME) + ", check device status\n";
+            current_time++;     
+        }
+        else { //syscall
+            boilerplate = intr_boilerplate(current_time, duration_intr, CONTEXT_SAVE_TIME, vectors);
+
+            execution += boilerplate.first;
+            current_time = boilerplate.second;
+
+            // SYSCALL ISR Execution:
+            int duration_device = delays[duration_intr - 1]; // The time taken by device
+            std::random_device rd; // Random Engine
+
+            // 1. Run ISR Activity
+            execution += std::to_string(current_time) + ", " + std::to_string(ISR_ACTIVITY_TIME) + ", SYSCALL: run the ISR"  + "\n";
+            current_time += ISR_ACTIVITY_TIME;
+
+            // 2. Transfer Data Activity
+            int remaining_duration = duration_device - ISR_ACTIVITY_TIME;
+            std::uniform_int_distribution<int> dist2(remaining_duration / 3, remaining_duration / 2);
+            int duration_transfer_data = dist2(rd);
+            execution += std::to_string(current_time) + ", " + std::to_string(duration_transfer_data) + ", transfer data"  + "\n";
+            current_time += duration_transfer_data;
+
+            // 3. Check for Errors Activity
+            int duration_check_for_errors = duration_device - ISR_ACTIVITY_TIME - duration_transfer_data;
+            execution += std::to_string(current_time) + ", " + std::to_string(duration_check_for_errors) + ", check for errors"  + "\n";
+            current_time += duration_check_for_errors;
 
             execution += std::to_string(current_time) + ", 1, IRET\n";
             current_time++;
+        
         }
 
 

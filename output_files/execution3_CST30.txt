@@ -1,0 +1,595 @@
+0, 49, CPU burst
+49, 1, switch to kernel mode
+50, 30, context saved
+80, 1, find vector 6 in memory position 0x000C
+81, 1, load address 0X0639 into the PC
+82, 40, SYSCALL: run the ISR
+122, 70, transfer data
+192, 101, check for errors
+293, 1, IRET
+294, 99, CPU burst
+393, 1, Check if the interrupt is maskable
+394, 1, Check the priority of the interrupt
+395, 1, switch to kernel mode
+396, 30, context saved
+426, 1, find vector 6 in memory position 0x000C
+427, 1, load address 0X0639 into the PC
+428, 40, END_IO
+468, 171, check device status
+469, 72, CPU burst
+541, 1, switch to kernel mode
+542, 30, context saved
+572, 1, find vector 13 in memory position 0x001A
+573, 1, load address 0X06C7 into the PC
+574, 40, SYSCALL: run the ISR
+614, 40, transfer data
+654, 65, check for errors
+719, 1, IRET
+720, 29, CPU burst
+749, 1, Check if the interrupt is maskable
+750, 1, Check the priority of the interrupt
+751, 1, switch to kernel mode
+752, 30, context saved
+782, 1, find vector 13 in memory position 0x001A
+783, 1, load address 0X06C7 into the PC
+784, 40, END_IO
+824, 105, check device status
+825, 19, CPU burst
+844, 1, switch to kernel mode
+845, 30, context saved
+875, 1, find vector 8 in memory position 0x0010
+876, 1, load address 0X06EF into the PC
+877, 40, SYSCALL: run the ISR
+917, 42, transfer data
+959, 70, check for errors
+1029, 1, IRET
+1030, 66, CPU burst
+1096, 1, Check if the interrupt is maskable
+1097, 1, Check the priority of the interrupt
+1098, 1, switch to kernel mode
+1099, 30, context saved
+1129, 1, find vector 8 in memory position 0x0010
+1130, 1, load address 0X06EF into the PC
+1131, 40, END_IO
+1171, 112, check device status
+1172, 11, CPU burst
+1183, 1, switch to kernel mode
+1184, 30, context saved
+1214, 1, find vector 4 in memory position 0x0008
+1215, 1, load address 0X0292 into the PC
+1216, 40, SYSCALL: run the ISR
+1256, 88, transfer data
+1344, 172, check for errors
+1516, 1, IRET
+1517, 21, CPU burst
+1538, 1, Check if the interrupt is maskable
+1539, 1, Check the priority of the interrupt
+1540, 1, switch to kernel mode
+1541, 30, context saved
+1571, 1, find vector 4 in memory position 0x0008
+1572, 1, load address 0X0292 into the PC
+1573, 40, END_IO
+1613, 260, check device status
+1614, 100, CPU burst
+1714, 1, switch to kernel mode
+1715, 30, context saved
+1745, 1, find vector 18 in memory position 0x0024
+1746, 1, load address 0X060A into the PC
+1747, 40, SYSCALL: run the ISR
+1787, 86, transfer data
+1873, 109, check for errors
+1982, 1, IRET
+1983, 41, CPU burst
+2024, 1, Check if the interrupt is maskable
+2025, 1, Check the priority of the interrupt
+2026, 1, switch to kernel mode
+2027, 30, context saved
+2057, 1, find vector 18 in memory position 0x0024
+2058, 1, load address 0X060A into the PC
+2059, 40, END_IO
+2099, 195, check device status
+2100, 10, CPU burst
+2110, 1, switch to kernel mode
+2111, 30, context saved
+2141, 1, find vector 12 in memory position 0x0018
+2142, 1, load address 0X03B9 into the PC
+2143, 40, SYSCALL: run the ISR
+2183, 168, transfer data
+2351, 315, check for errors
+2666, 1, IRET
+2667, 76, CPU burst
+2743, 1, Check if the interrupt is maskable
+2744, 1, Check the priority of the interrupt
+2745, 1, switch to kernel mode
+2746, 30, context saved
+2776, 1, find vector 12 in memory position 0x0018
+2777, 1, load address 0X03B9 into the PC
+2778, 40, END_IO
+2818, 483, check device status
+2819, 12, CPU burst
+2831, 1, switch to kernel mode
+2832, 30, context saved
+2862, 1, find vector 15 in memory position 0x001E
+2863, 1, load address 0X0584 into the PC
+2864, 40, SYSCALL: run the ISR
+2904, 197, transfer data
+3101, 219, check for errors
+3320, 1, IRET
+3321, 57, CPU burst
+3378, 1, Check if the interrupt is maskable
+3379, 1, Check the priority of the interrupt
+3380, 1, switch to kernel mode
+3381, 30, context saved
+3411, 1, find vector 15 in memory position 0x001E
+3412, 1, load address 0X0584 into the PC
+3413, 40, END_IO
+3453, 416, check device status
+3454, 93, CPU burst
+3547, 1, switch to kernel mode
+3548, 30, context saved
+3578, 1, find vector 11 in memory position 0x0016
+3579, 1, load address 0X01F8 into the PC
+3580, 40, SYSCALL: run the ISR
+3620, 232, transfer data
+3852, 292, check for errors
+4144, 1, IRET
+4145, 56, CPU burst
+4201, 1, Check if the interrupt is maskable
+4202, 1, Check the priority of the interrupt
+4203, 1, switch to kernel mode
+4204, 30, context saved
+4234, 1, find vector 11 in memory position 0x0016
+4235, 1, load address 0X01F8 into the PC
+4236, 40, END_IO
+4276, 524, check device status
+4277, 38, CPU burst
+4315, 1, switch to kernel mode
+4316, 30, context saved
+4346, 1, find vector 8 in memory position 0x0010
+4347, 1, load address 0X06EF into the PC
+4348, 40, SYSCALL: run the ISR
+4388, 42, transfer data
+4430, 70, check for errors
+4500, 1, IRET
+4501, 12, CPU burst
+4513, 1, Check if the interrupt is maskable
+4514, 1, Check the priority of the interrupt
+4515, 1, switch to kernel mode
+4516, 30, context saved
+4546, 1, find vector 8 in memory position 0x0010
+4547, 1, load address 0X06EF into the PC
+4548, 40, END_IO
+4588, 112, check device status
+4589, 53, CPU burst
+4642, 1, switch to kernel mode
+4643, 30, context saved
+4673, 1, find vector 13 in memory position 0x001A
+4674, 1, load address 0X06C7 into the PC
+4675, 40, SYSCALL: run the ISR
+4715, 46, transfer data
+4761, 59, check for errors
+4820, 1, IRET
+4821, 10, CPU burst
+4831, 1, Check if the interrupt is maskable
+4832, 1, Check the priority of the interrupt
+4833, 1, switch to kernel mode
+4834, 30, context saved
+4864, 1, find vector 13 in memory position 0x001A
+4865, 1, load address 0X06C7 into the PC
+4866, 40, END_IO
+4906, 105, check device status
+4907, 85, CPU burst
+4992, 1, switch to kernel mode
+4993, 30, context saved
+5023, 1, find vector 19 in memory position 0x0026
+5024, 1, load address 0X0765 into the PC
+5025, 40, SYSCALL: run the ISR
+5065, 29, transfer data
+5094, 54, check for errors
+5148, 1, IRET
+5149, 81, CPU burst
+5230, 1, Check if the interrupt is maskable
+5231, 1, Check the priority of the interrupt
+5232, 1, switch to kernel mode
+5233, 30, context saved
+5263, 1, find vector 19 in memory position 0x0026
+5264, 1, load address 0X0765 into the PC
+5265, 40, END_IO
+5305, 83, check device status
+5306, 19, CPU burst
+5325, 1, switch to kernel mode
+5326, 30, context saved
+5356, 1, find vector 9 in memory position 0x0012
+5357, 1, load address 0X036C into the PC
+5358, 40, SYSCALL: run the ISR
+5398, 447, transfer data
+5845, 513, check for errors
+6358, 1, IRET
+6359, 30, CPU burst
+6389, 1, Check if the interrupt is maskable
+6390, 1, Check the priority of the interrupt
+6391, 1, switch to kernel mode
+6392, 30, context saved
+6422, 1, find vector 9 in memory position 0x0012
+6423, 1, load address 0X036C into the PC
+6424, 40, END_IO
+6464, 960, check device status
+6465, 48, CPU burst
+6513, 1, switch to kernel mode
+6514, 30, context saved
+6544, 1, find vector 3 in memory position 0x0006
+6545, 1, load address 0X042B into the PC
+6546, 40, SYSCALL: run the ISR
+6586, 45, transfer data
+6631, 65, check for errors
+6696, 1, IRET
+6697, 35, CPU burst
+6732, 1, Check if the interrupt is maskable
+6733, 1, Check the priority of the interrupt
+6734, 1, switch to kernel mode
+6735, 30, context saved
+6765, 1, find vector 3 in memory position 0x0006
+6766, 1, load address 0X042B into the PC
+6767, 40, END_IO
+6807, 110, check device status
+6808, 88, CPU burst
+6896, 1, switch to kernel mode
+6897, 30, context saved
+6927, 1, find vector 11 in memory position 0x0016
+6928, 1, load address 0X01F8 into the PC
+6929, 40, SYSCALL: run the ISR
+6969, 214, transfer data
+7183, 310, check for errors
+7493, 1, IRET
+7494, 20, CPU burst
+7514, 1, Check if the interrupt is maskable
+7515, 1, Check the priority of the interrupt
+7516, 1, switch to kernel mode
+7517, 30, context saved
+7547, 1, find vector 11 in memory position 0x0016
+7548, 1, load address 0X01F8 into the PC
+7549, 40, END_IO
+7589, 524, check device status
+7590, 61, CPU burst
+7651, 1, switch to kernel mode
+7652, 30, context saved
+7682, 1, find vector 1 in memory position 0x0002
+7683, 1, load address 0X029C into the PC
+7684, 40, SYSCALL: run the ISR
+7724, 34, transfer data
+7758, 36, check for errors
+7794, 1, IRET
+7795, 20, CPU burst
+7815, 1, Check if the interrupt is maskable
+7816, 1, Check the priority of the interrupt
+7817, 1, switch to kernel mode
+7818, 30, context saved
+7848, 1, find vector 1 in memory position 0x0002
+7849, 1, load address 0X029C into the PC
+7850, 40, END_IO
+7890, 70, check device status
+7891, 48, CPU burst
+7939, 1, switch to kernel mode
+7940, 30, context saved
+7970, 1, find vector 1 in memory position 0x0002
+7971, 1, load address 0X029C into the PC
+7972, 40, SYSCALL: run the ISR
+8012, 29, transfer data
+8041, 41, check for errors
+8082, 1, IRET
+8083, 33, CPU burst
+8116, 1, Check if the interrupt is maskable
+8117, 1, Check the priority of the interrupt
+8118, 1, switch to kernel mode
+8119, 30, context saved
+8149, 1, find vector 1 in memory position 0x0002
+8150, 1, load address 0X029C into the PC
+8151, 40, END_IO
+8191, 70, check device status
+8192, 91, CPU burst
+8283, 1, switch to kernel mode
+8284, 30, context saved
+8314, 1, find vector 14 in memory position 0x001C
+8315, 1, load address 0X0165 into the PC
+8316, 40, SYSCALL: run the ISR
+8356, 243, transfer data
+8599, 353, check for errors
+8952, 1, IRET
+8953, 41, CPU burst
+8994, 1, Check if the interrupt is maskable
+8995, 1, Check the priority of the interrupt
+8996, 1, switch to kernel mode
+8997, 30, context saved
+9027, 1, find vector 14 in memory position 0x001C
+9028, 1, load address 0X0165 into the PC
+9029, 40, END_IO
+9069, 596, check device status
+9070, 99, CPU burst
+9169, 1, switch to kernel mode
+9170, 30, context saved
+9200, 1, find vector 3 in memory position 0x0006
+9201, 1, load address 0X042B into the PC
+9202, 40, SYSCALL: run the ISR
+9242, 47, transfer data
+9289, 63, check for errors
+9352, 1, IRET
+9353, 50, CPU burst
+9403, 1, Check if the interrupt is maskable
+9404, 1, Check the priority of the interrupt
+9405, 1, switch to kernel mode
+9406, 30, context saved
+9436, 1, find vector 3 in memory position 0x0006
+9437, 1, load address 0X042B into the PC
+9438, 40, END_IO
+9478, 110, check device status
+9479, 22, CPU burst
+9501, 1, switch to kernel mode
+9502, 30, context saved
+9532, 1, find vector 17 in memory position 0x0022
+9533, 1, load address 0X05B3 into the PC
+9534, 40, SYSCALL: run the ISR
+9574, 323, transfer data
+9897, 593, check for errors
+10490, 1, IRET
+10491, 66, CPU burst
+10557, 1, Check if the interrupt is maskable
+10558, 1, Check the priority of the interrupt
+10559, 1, switch to kernel mode
+10560, 30, context saved
+10590, 1, find vector 17 in memory position 0x0022
+10591, 1, load address 0X05B3 into the PC
+10592, 40, END_IO
+10632, 916, check device status
+10633, 55, CPU burst
+10688, 1, switch to kernel mode
+10689, 30, context saved
+10719, 1, find vector 14 in memory position 0x001C
+10720, 1, load address 0X0165 into the PC
+10721, 40, SYSCALL: run the ISR
+10761, 238, transfer data
+10999, 358, check for errors
+11357, 1, IRET
+11358, 80, CPU burst
+11438, 1, Check if the interrupt is maskable
+11439, 1, Check the priority of the interrupt
+11440, 1, switch to kernel mode
+11441, 30, context saved
+11471, 1, find vector 14 in memory position 0x001C
+11472, 1, load address 0X0165 into the PC
+11473, 40, END_IO
+11513, 596, check device status
+11514, 51, CPU burst
+11565, 1, switch to kernel mode
+11566, 30, context saved
+11596, 1, find vector 15 in memory position 0x001E
+11597, 1, load address 0X0584 into the PC
+11598, 40, SYSCALL: run the ISR
+11638, 145, transfer data
+11783, 271, check for errors
+12054, 1, IRET
+12055, 61, CPU burst
+12116, 1, Check if the interrupt is maskable
+12117, 1, Check the priority of the interrupt
+12118, 1, switch to kernel mode
+12119, 30, context saved
+12149, 1, find vector 15 in memory position 0x001E
+12150, 1, load address 0X0584 into the PC
+12151, 40, END_IO
+12191, 416, check device status
+12192, 39, CPU burst
+12231, 1, switch to kernel mode
+12232, 30, context saved
+12262, 1, find vector 17 in memory position 0x0022
+12263, 1, load address 0X05B3 into the PC
+12264, 40, SYSCALL: run the ISR
+12304, 411, transfer data
+12715, 505, check for errors
+13220, 1, IRET
+13221, 80, CPU burst
+13301, 1, Check if the interrupt is maskable
+13302, 1, Check the priority of the interrupt
+13303, 1, switch to kernel mode
+13304, 30, context saved
+13334, 1, find vector 17 in memory position 0x0022
+13335, 1, load address 0X05B3 into the PC
+13336, 40, END_IO
+13376, 916, check device status
+13377, 96, CPU burst
+13473, 1, switch to kernel mode
+13474, 30, context saved
+13504, 1, find vector 19 in memory position 0x0026
+13505, 1, load address 0X0765 into the PC
+13506, 40, SYSCALL: run the ISR
+13546, 32, transfer data
+13578, 51, check for errors
+13629, 1, IRET
+13630, 88, CPU burst
+13718, 1, Check if the interrupt is maskable
+13719, 1, Check the priority of the interrupt
+13720, 1, switch to kernel mode
+13721, 30, context saved
+13751, 1, find vector 19 in memory position 0x0026
+13752, 1, load address 0X0765 into the PC
+13753, 40, END_IO
+13793, 83, check device status
+13794, 97, CPU burst
+13891, 1, switch to kernel mode
+13892, 30, context saved
+13922, 1, find vector 8 in memory position 0x0010
+13923, 1, load address 0X06EF into the PC
+13924, 40, SYSCALL: run the ISR
+13964, 38, transfer data
+14002, 74, check for errors
+14076, 1, IRET
+14077, 39, CPU burst
+14116, 1, Check if the interrupt is maskable
+14117, 1, Check the priority of the interrupt
+14118, 1, switch to kernel mode
+14119, 30, context saved
+14149, 1, find vector 8 in memory position 0x0010
+14150, 1, load address 0X06EF into the PC
+14151, 40, END_IO
+14191, 112, check device status
+14192, 30, CPU burst
+14222, 1, switch to kernel mode
+14223, 30, context saved
+14253, 1, find vector 4 in memory position 0x0008
+14254, 1, load address 0X0292 into the PC
+14255, 40, SYSCALL: run the ISR
+14295, 97, transfer data
+14392, 163, check for errors
+14555, 1, IRET
+14556, 77, CPU burst
+14633, 1, Check if the interrupt is maskable
+14634, 1, Check the priority of the interrupt
+14635, 1, switch to kernel mode
+14636, 30, context saved
+14666, 1, find vector 4 in memory position 0x0008
+14667, 1, load address 0X0292 into the PC
+14668, 40, END_IO
+14708, 260, check device status
+14709, 85, CPU burst
+14794, 1, switch to kernel mode
+14795, 30, context saved
+14825, 1, find vector 13 in memory position 0x001A
+14826, 1, load address 0X06C7 into the PC
+14827, 40, SYSCALL: run the ISR
+14867, 38, transfer data
+14905, 67, check for errors
+14972, 1, IRET
+14973, 47, CPU burst
+15020, 1, Check if the interrupt is maskable
+15021, 1, Check the priority of the interrupt
+15022, 1, switch to kernel mode
+15023, 30, context saved
+15053, 1, find vector 13 in memory position 0x001A
+15054, 1, load address 0X06C7 into the PC
+15055, 40, END_IO
+15095, 105, check device status
+15096, 18, CPU burst
+15114, 1, switch to kernel mode
+15115, 30, context saved
+15145, 1, find vector 20 in memory position 0x0028
+15146, 1, load address 0X07B7 into the PC
+15147, 40, SYSCALL: run the ISR
+15187, 287, transfer data
+15474, 325, check for errors
+15799, 1, IRET
+15800, 44, CPU burst
+15844, 1, Check if the interrupt is maskable
+15845, 1, Check the priority of the interrupt
+15846, 1, switch to kernel mode
+15847, 30, context saved
+15877, 1, find vector 20 in memory position 0x0028
+15878, 1, load address 0X07B7 into the PC
+15879, 40, END_IO
+15919, 612, check device status
+15920, 53, CPU burst
+15973, 1, switch to kernel mode
+15974, 30, context saved
+16004, 1, find vector 6 in memory position 0x000C
+16005, 1, load address 0X0639 into the PC
+16006, 40, SYSCALL: run the ISR
+16046, 61, transfer data
+16107, 110, check for errors
+16217, 1, IRET
+16218, 69, CPU burst
+16287, 1, Check if the interrupt is maskable
+16288, 1, Check the priority of the interrupt
+16289, 1, switch to kernel mode
+16290, 30, context saved
+16320, 1, find vector 6 in memory position 0x000C
+16321, 1, load address 0X0639 into the PC
+16322, 40, END_IO
+16362, 171, check device status
+16363, 72, CPU burst
+16435, 1, switch to kernel mode
+16436, 30, context saved
+16466, 1, find vector 4 in memory position 0x0008
+16467, 1, load address 0X0292 into the PC
+16468, 40, SYSCALL: run the ISR
+16508, 102, transfer data
+16610, 158, check for errors
+16768, 1, IRET
+16769, 25, CPU burst
+16794, 1, Check if the interrupt is maskable
+16795, 1, Check the priority of the interrupt
+16796, 1, switch to kernel mode
+16797, 30, context saved
+16827, 1, find vector 4 in memory position 0x0008
+16828, 1, load address 0X0292 into the PC
+16829, 40, END_IO
+16869, 260, check device status
+16870, 87, CPU burst
+16957, 1, switch to kernel mode
+16958, 30, context saved
+16988, 1, find vector 5 in memory position 0x000A
+16989, 1, load address 0X048B into the PC
+16990, 40, SYSCALL: run the ISR
+17030, 86, transfer data
+17116, 124, check for errors
+17240, 1, IRET
+17241, 63, CPU burst
+17304, 1, Check if the interrupt is maskable
+17305, 1, Check the priority of the interrupt
+17306, 1, switch to kernel mode
+17307, 30, context saved
+17337, 1, find vector 5 in memory position 0x000A
+17338, 1, load address 0X048B into the PC
+17339, 40, END_IO
+17379, 210, check device status
+17380, 11, CPU burst
+17391, 1, switch to kernel mode
+17392, 30, context saved
+17422, 1, find vector 15 in memory position 0x001E
+17423, 1, load address 0X0584 into the PC
+17424, 40, SYSCALL: run the ISR
+17464, 175, transfer data
+17639, 241, check for errors
+17880, 1, IRET
+17881, 74, CPU burst
+17955, 1, Check if the interrupt is maskable
+17956, 1, Check the priority of the interrupt
+17957, 1, switch to kernel mode
+17958, 30, context saved
+17988, 1, find vector 15 in memory position 0x001E
+17989, 1, load address 0X0584 into the PC
+17990, 40, END_IO
+18030, 416, check device status
+18031, 19, CPU burst
+18050, 1, switch to kernel mode
+18051, 30, context saved
+18081, 1, find vector 4 in memory position 0x0008
+18082, 1, load address 0X0292 into the PC
+18083, 40, SYSCALL: run the ISR
+18123, 92, transfer data
+18215, 168, check for errors
+18383, 1, IRET
+18384, 69, CPU burst
+18453, 1, Check if the interrupt is maskable
+18454, 1, Check the priority of the interrupt
+18455, 1, switch to kernel mode
+18456, 30, context saved
+18486, 1, find vector 4 in memory position 0x0008
+18487, 1, load address 0X0292 into the PC
+18488, 40, END_IO
+18528, 260, check device status
+18529, 50, CPU burst
+18579, 1, switch to kernel mode
+18580, 30, context saved
+18610, 1, find vector 5 in memory position 0x000A
+18611, 1, load address 0X048B into the PC
+18612, 40, SYSCALL: run the ISR
+18652, 103, transfer data
+18755, 107, check for errors
+18862, 1, IRET
+18863, 28, CPU burst
+18891, 1, Check if the interrupt is maskable
+18892, 1, Check the priority of the interrupt
+18893, 1, switch to kernel mode
+18894, 30, context saved
+18924, 1, find vector 5 in memory position 0x000A
+18925, 1, load address 0X048B into the PC
+18926, 40, END_IO
+18966, 210, check device status
+18967, 23, CPU burst
