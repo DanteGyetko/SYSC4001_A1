@@ -8,8 +8,9 @@
 
 #include "interrupts.hpp"
 
-#define CONTEXT_SAVE_TIME 30
+#define CONTEXT_SAVE_TIME 10
 #define ISR_ACTIVITY_TIME 40
+#define CPU_SPEED_DIVIDER 1
 
 int main(int argc, char** argv) {
     //vectors is a C++ std::vector of strings that contain the address of the ISR
@@ -34,8 +35,8 @@ int main(int argc, char** argv) {
 
         /******************ADD YOUR SIMULATION CODE HERE*************************/
         if (activity == "CPU"){
-            execution += std::to_string(current_time) + ", " + std::to_string(duration_intr) + ", " + "CPU burst\n";
-            current_time += duration_intr;
+            execution += std::to_string(current_time) + ", " + std::to_string(duration_intr * CPU_SPEED_DIVIDER) + ", " + "CPU burst\n";
+            current_time += duration_intr * CPU_SPEED_DIVIDER;
         }
         else if (activity == "END_IO"){
             execution += std::to_string(current_time) + ", 1, Check if the interrupt is maskable\n";
