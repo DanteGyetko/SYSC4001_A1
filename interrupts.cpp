@@ -5,15 +5,13 @@
  *
  */
 
-// Added this comment to check git functionality, will be reomved before submission
 
 #include "interrupts.hpp"
 
-#define CONTEXT_SAVE_TIME 10
+#define CONTEXT_SAVE_TIME 30
 #define ISR_ACTIVITY_TIME 40
 
 int main(int argc, char** argv) {
-
     //vectors is a C++ std::vector of strings that contain the address of the ISR
     //delays  is a C++ std::vector of ints that contain the delays of each device
     //the index of these elemens is the device number, starting from 0
